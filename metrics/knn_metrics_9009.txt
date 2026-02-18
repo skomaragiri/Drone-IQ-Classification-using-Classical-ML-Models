@@ -1,0 +1,57 @@
+Model: K-Nearest Neighbors
+Accuracy: 90.09%
+Date: 2026-01-03 06:29:46.485647
+Notes: K_NEIGHBORS = 6
+
+=========PARAMETERS=========
+WINDOW_LEN = 4,096
+OVERLAP = 0.5
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 53
+NUM_EVALUATION_FILES = 17
+
+Count	Label
+4,567	Ruko_F11_pro_UL
+4,567	Ocusync_3.0_mavic_air_2s_UL
+4,567	Ocusync_2.0_mavic_air_2_UL
+4,567	Lightbridge_phantom_3_pro_DL
+4,567	Ruko_F11_Uplink
+4,567	Ocusync_2.0_mavic_air_2_DL
+4,567	Lightbridge_phantom_3_pro_UL
+4,567	DeerC_DE22_Uplink
+4,567	no_label
+4,567	Ocusync_2.0_mini_se_DL
+4,567	Ocusync_3.0_mavic_air_2s_DL
+
+Classification Report:
+                              precision    recall  f1-score   support
+
+           DeerC_DE22_Uplink       0.98      0.91      0.94      4567
+Lightbridge_phantom_3_pro_DL       0.79      1.00      0.88      4567
+Lightbridge_phantom_3_pro_UL       0.76      1.00      0.86      4567
+  Ocusync_2.0_mavic_air_2_DL       0.87      0.75      0.80      4567
+  Ocusync_2.0_mavic_air_2_UL       0.98      0.60      0.75      4567
+      Ocusync_2.0_mini_se_DL       0.98      0.99      0.99      4567
+ Ocusync_3.0_mavic_air_2s_DL       0.88      1.00      0.93      4567
+ Ocusync_3.0_mavic_air_2s_UL       0.97      0.99      0.98      4567
+             Ruko_F11_Uplink       0.99      1.00      0.99      4567
+             Ruko_F11_pro_UL       0.96      0.98      0.97      4567
+                    no_label       0.84      0.70      0.77      4567
+
+                    accuracy                           0.90     50237
+                   macro avg       0.91      0.90      0.90     50237
+                weighted avg       0.91      0.90      0.90     50237
+
+
+Confusion Matrix:
+[[4159    0    2    3   12   19    0    5   28   96  243]
+ [   0 4566    0    1    0    0    0    0    0    0    0]
+ [   0    5 4551    0    0    0    0    0    0   11    0]
+ [   0 1159    0 3408    0    0    0    0    0    0    0]
+ [   0   22 1437   53 2742    0    0    0    0    0  313]
+ [   0    0    0    0    0 4525    0    0    0    0   42]
+ [   0    0    0    0    0    0 4549   17    0    0    1]
+ [   0    0    0    0    0    0   61 4506    0    0    0]
+ [   7    0    3    0    6    0    0    0 4551    0    0]
+ [  80    0    0    0    0    0    0    0    0 4487    0]
+ [   9   33   21  473   33   53  556   95   19   58 3217]]

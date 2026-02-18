@@ -1,0 +1,39 @@
+Model: Gaussian Naive-Bayes
+Accuracy: 26.63%
+Date: 2026-01-29 09:19:52.874611
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 4,096
+OVERLAP = 0.5
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 8
+
+Count	Label
+174,962	no_label
+24,778	Ocusync_2.0_mini_4k_DL
+23,870	Ocusync_2.0_mini_4k_UL
+6,357	Bluetooth
+6,999	WIFI
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+             Bluetooth       0.00      0.00      0.00     23870
+Ocusync_2.0_mini_4k_DL       0.28      1.00      0.43     23870
+Ocusync_2.0_mini_4k_UL       0.12      0.14      0.13     23870
+                  WIFI       0.00      0.00      0.00     23870
+              no_label       0.93      0.20      0.32     23870
+
+              accuracy                           0.27    119350
+             macro avg       0.27      0.27      0.18    119350
+          weighted avg       0.27      0.27      0.18    119350
+
+
+Confusion Matrix:
+[[    0 13014 10856     0     0]
+ [    0 23846    24     0     0]
+ [  522 19004  3235   755   354]
+ [    0 23718   152     0     0]
+ [  852  6200 11750   372  4696]]

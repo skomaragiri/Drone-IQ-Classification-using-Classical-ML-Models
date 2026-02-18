@@ -1,0 +1,63 @@
+Model: Random Forest
+Accuracy: 90.29%
+Max files: 100000
+Date: 2025-12-18 21:33:42.627483
+Notes: Using the fixed length sample size
+
+
+Count	Label
+125138	no_label
+1028	Ruko_F11_Uplink
+11546	Ocusync_2.0_mini_se_DL
+1674	DeerC_DE22_Uplink
+25	HS100_Downlink
+10494	Lightbridge_phantom_3_pro_DL
+1437	Lightbridge_phantom_3_pro_UL
+95230	Ocusync_3.0_mavic_air_2s_DL
+7461	Ocusync_3.0_mavic_air_2s_UL
+10957	Ocusync_2.0_mavic_air_2_DL
+850	Ocusync_2.0_mavic_air_2_UL
+
+Classification Report:
+                              precision    recall  f1-score   support
+
+           DeerC_DE22_Uplink       0.87      0.91      0.89      1674
+              HS100_Downlink       0.76      1.00      0.86        25
+Lightbridge_phantom_3_pro_DL       0.90      1.00      0.95     10494
+Lightbridge_phantom_3_pro_UL       0.84      0.99      0.91      1437
+  Ocusync_2.0_mavic_air_2_DL       0.69      0.93      0.79     10957
+  Ocusync_2.0_mavic_air_2_UL       0.68      0.92      0.78       850
+      Ocusync_2.0_mini_se_DL       0.96      0.92      0.94     11546
+ Ocusync_3.0_mavic_air_2s_DL       0.86      1.00      0.92     95230
+ Ocusync_3.0_mavic_air_2s_UL       0.78      1.00      0.88      7461
+             Ruko_F11_Uplink       0.84      1.00      0.91      1028
+                    no_label       0.99      0.81      0.89    125138
+
+                    accuracy                           0.90    265840
+                   macro avg       0.83      0.95      0.88    265840
+                weighted avg       0.92      0.90      0.90    265840
+
+
+Confusion Matrix:
+[[  1527      0      0      1      0      1      0      0      0      6
+     139]
+ [     0     25      0      0      0      0      0      0      0      0
+       0]
+ [     0      0  10494      0      0      0      0      0      0      0
+       0]
+ [     0      0      1   1426      0      0      0      0      0      0
+      10]
+ [     0      0    812      0  10143      0      0      0      0      0
+       2]
+ [     0      0      3      7      2    782      0      0     17      0
+      39]
+ [     0      0      0      0      0      0  10623      0      0      0
+     923]
+ [     0      0      0      0      0      0      0  95170     45      0
+      15]
+ [     0      0      0      0      0      0      0     18   7443      0
+       0]
+ [     0      0      0      0      0      1      0      0      0   1027
+       0]
+ [   223      8    286    254   4581    370    386  15455   2031    185
+  101359]]

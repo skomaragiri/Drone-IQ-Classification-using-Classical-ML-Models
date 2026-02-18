@@ -1,0 +1,41 @@
+Model: Random Forest
+Accuracy: 99.12%
+
+
+Number of samples: 34032
+Count	Label
+16951	unknown
+466	Ocusync_2.0_mavic_air_2_DL
+1171	Ocusync_2.0_mavic_air_2_UL
+1663	Ocusync_3.0_mavic_air_2s_UL
+3279	Ocusync_3.0_mavic_air_2s_DL
+2563	Ruko_F11_Uplink
+2939	HS100_Downlink
+5000	Ocusync_2.0_mini_se_DL
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+             HS100_Downlink       1.00      1.00      1.00       185
+ Ocusync_2.0_mavic_air_2_DL       0.99      0.90      0.94       208
+ Ocusync_2.0_mavic_air_2_UL       0.76      0.89      0.82       102
+     Ocusync_2.0_mini_se_DL       1.00      0.96      0.98       741
+Ocusync_3.0_mavic_air_2s_DL       1.00      1.00      1.00      1857
+Ocusync_3.0_mavic_air_2s_UL       0.99      1.00      0.99      1035
+            Ruko_F11_Uplink       1.00      1.00      1.00       102
+                    unknown       0.99      1.00      1.00      4530
+
+                   accuracy                           0.99      8760
+                  macro avg       0.97      0.97      0.97      8760
+               weighted avg       0.99      0.99      0.99      8760
+
+
+Confusion Matrix:
+[[ 185    0    0    0    0    0    0    0]
+ [   0  187    0    0    0    0    0   21]
+ [   0    0   91    0    0    4    0    7]
+ [   0    0   28  713    0    0    0    0]
+ [   0    0    0    0 1849    8    0    0]
+ [   0    0    0    0    0 1035    0    0]
+ [   0    0    0    0    0    0  102    0]
+ [   0    1    1    1    6    0    0 4521]]

@@ -1,0 +1,57 @@
+Model: Random Forest
+Accuracy: 98.90%
+
+This was made with the dynamic method of segmenting. 
+So each input sample has a varying number of IQ samples --- based on 
+the length of the annotation from OmniSIG. 
+
+
+Number of samples: 73632
+Count-Label-----------------------
+36700	unknown
+466	Ocusync_2.0_mavic_air_2_DL
+1171	Ocusync_2.0_mavic_air_2_UL
+1663	Ocusync_3.0_mavic_air_2s_UL
+3279	Ocusync_3.0_mavic_air_2s_DL
+2563	Ruko_F11_Uplink
+2939	HS100_Downlink
+19856	Ocusync_2.0_mini_se_DL
+1956	Ruko_F11_pro_UL
+172	Lightbridge_phantom_3_pro_UL
+294	Lightbridge_phantom_3_pro_DL
+2521	DeerC_DE22_Uplink
+
+Classification Report:
+                              precision    recall  f1-score   support
+
+           DeerC_DE22_Uplink       0.98      0.78      0.87       153
+              HS100_Downlink       1.00      1.00      1.00       185
+Lightbridge_phantom_3_pro_DL       1.00      1.00      1.00        73
+Lightbridge_phantom_3_pro_UL       1.00      0.91      0.95        46
+  Ocusync_2.0_mavic_air_2_DL       0.99      0.88      0.93       208
+  Ocusync_2.0_mavic_air_2_UL       0.99      0.88      0.93       102
+      Ocusync_2.0_mini_se_DL       1.00      1.00      1.00       741
+ Ocusync_3.0_mavic_air_2s_DL       1.00      1.00      1.00      1857
+ Ocusync_3.0_mavic_air_2s_UL       0.99      1.00      0.99      1035
+             Ruko_F11_Uplink       0.89      0.99      0.94       102
+             Ruko_F11_pro_UL       0.81      0.96      0.88       122
+                     unknown       0.99      1.00      1.00      4530
+
+                    accuracy                           0.99      9154
+                   macro avg       0.97      0.95      0.96      9154
+                weighted avg       0.99      0.99      0.99      9154
+
+
+Confusion Matrix:
+[[ 120    0    0    0    0    0    0    0    0   11   22    0]
+ [   0  185    0    0    0    0    0    0    0    0    0    0]
+ [   0    0   73    0    0    0    0    0    0    0    0    0]
+ [   0    0    0   42    0    0    0    0    0    0    0    4]
+ [   0    0    0    0  183    0    0    3    0    0    0   22]
+ [   0    0    0    0    0   90    0    0    6    0    0    6]
+ [   0    0    0    0    0    0  741    0    0    0    0    0]
+ [   0    0    0    0    0    0    0 1849    8    0    0    0]
+ [   0    0    0    0    0    0    0    0 1035    0    0    0]
+ [   0    0    0    0    0    0    0    0    0  101    1    0]
+ [   3    0    0    0    0    0    0    0    0    2  117    0]
+ [   0    0    0    0    1    1    2    4    0    0    5 4517]]

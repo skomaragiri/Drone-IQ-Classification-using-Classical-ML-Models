@@ -1,0 +1,31 @@
+Model: Random Forest
+Accuracy: 85.17%
+Max files: 14
+Date: 2025-12-18 11:30:01.867428
+Notes: Using the fixed length sample size
+
+
+Count	Label
+5495	Ocusync_2.0_mavic_air_2_DL
+1028	Ruko_F11_Uplink
+2000	no_label
+170	Ocusync_2.0_mavic_air_2_UL
+
+Classification Report:
+                            precision    recall  f1-score   support
+
+Ocusync_2.0_mavic_air_2_DL       0.94      1.00      0.97      5495
+Ocusync_2.0_mavic_air_2_UL       0.16      1.00      0.28       170
+           Ruko_F11_Uplink       0.94      1.00      0.97      1028
+                  no_label       1.00      0.36      0.52      2000
+
+                  accuracy                           0.85      8693
+                 macro avg       0.76      0.84      0.68      8693
+              weighted avg       0.94      0.85      0.85      8693
+
+
+Confusion Matrix:
+[[5495    0    0    0]
+ [   0  170    0    0]
+ [   0    0 1028    0]
+ [ 330  892   67  711]]

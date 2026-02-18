@@ -1,0 +1,49 @@
+Model: Random Forest
+Accuracy: 87.20%
+
+
+Number of samples: 75390
+Count	Label
+37592	unknown
+466	Ocusync_2.0_mavic_air_2_DL
+1171	Ocusync_2.0_mavic_air_2_UL
+2189	Ocusync_3.0_mavic_air_2s_UL
+4085	Ocusync_3.0_mavic_air_2s_DL
+2563	Ruko_F11_Uplink
+2939	HS100_Downlink
+19856	Ocusync_2.0_mini_se_DL
+1956	Ruko_F11_pro_UL
+2521	DeerC_DE22_Uplink
+50	Burst
+2	
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+          DeerC_DE22_Uplink       0.80      0.86      0.83      1425
+             HS100_Downlink       1.00      1.00      1.00       185
+ Ocusync_2.0_mavic_air_2_DL       0.30      0.08      0.13      1251
+ Ocusync_2.0_mavic_air_2_UL       0.71      0.90      0.80       102
+     Ocusync_2.0_mini_se_DL       1.00      0.97      0.99      6703
+Ocusync_3.0_mavic_air_2s_DL       0.72      0.05      0.09      1754
+Ocusync_3.0_mavic_air_2s_UL       0.94      0.82      0.88        77
+            Ruko_F11_Uplink       0.19      0.13      0.15       773
+            Ruko_F11_pro_UL       0.79      0.66      0.72      2122
+                    unknown       0.87      1.00      0.93     21776
+
+                   accuracy                           0.87     36168
+                  macro avg       0.73      0.65      0.65     36168
+               weighted avg       0.85      0.87      0.84     36168
+
+
+Confusion Matrix:
+[[ 1230     0     0     0     0     0     0    30   165     0]
+ [    0   185     0     0     0     0     0     0     0     0]
+ [    0     0   100     0     0    29     0     1   166   955]
+ [    0     0     0    92     0     0     2     0     0     8]
+ [    0     0     0    25  6509     0     1     0     0   168]
+ [    0     0   237     0     0    86     0     0     0  1431]
+ [    0     0     0     9     0     5    63     0     0     0]
+ [    0     0     0     0     0     0     0   101    46   626]
+ [  309     0     0     0     0     0     0   405  1408     0]
+ [    0     0     1     3     1     0     1     1     6 21763]]

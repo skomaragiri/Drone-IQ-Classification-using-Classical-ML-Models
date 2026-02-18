@@ -1,0 +1,51 @@
+Model: Gaussian Naive-Bayes
+Accuracy: 56.67%
+Max files: 100000
+Date: 2025-12-31 17:51:47.619910
+Window size: 16,384
+Overlap: 0.5
+Notes: Using the fixed length sample size
+
+
+Count	Label
+378	DeerC_DE22_Uplink
+378	Ocusync_2.0_mini_se_DL
+378	Lightbridge_phantom_3_pro_DL
+378	Ocusync_2.0_mavic_air_2_DL
+378	Ruko_F11_Uplink
+378	Lightbridge_phantom_3_pro_UL
+378	Ocusync_3.0_mavic_air_2s_UL
+378	Ocusync_3.0_mavic_air_2s_DL
+378	no_label
+378	Ocusync_2.0_mavic_air_2_UL
+
+Classification Report:
+                              precision    recall  f1-score   support
+
+           DeerC_DE22_Uplink       0.67      0.39      0.50       378
+Lightbridge_phantom_3_pro_DL       0.99      0.97      0.98       378
+Lightbridge_phantom_3_pro_UL       0.59      0.71      0.64       378
+  Ocusync_2.0_mavic_air_2_DL       0.00      0.00      0.00       378
+  Ocusync_2.0_mavic_air_2_UL       0.00      0.00      0.00       378
+      Ocusync_2.0_mini_se_DL       0.97      0.93      0.95       378
+ Ocusync_3.0_mavic_air_2s_DL       0.78      1.00      0.88       378
+ Ocusync_3.0_mavic_air_2s_UL       0.24      0.68      0.35       378
+             Ruko_F11_Uplink       0.65      0.57      0.61       378
+                    no_label       0.75      0.42      0.54       378
+
+                    accuracy                           0.57      3780
+                   macro avg       0.57      0.57      0.54      3780
+                weighted avg       0.57      0.57      0.54      3780
+
+
+Confusion Matrix:
+[[149   0   7   0   0   0   0 120  81  21]
+ [  0 365   0   0  12   0   0   1   0   0]
+ [ 15   0 267   0  46   0   0  33  17   0]
+ [  0   0   0   0   0   0   0 378   0   0]
+ [ 20   0 153   0   0   0   0 200   5   0]
+ [  0   0   0   1  11 352   0   3   0  11]
+ [  0   0   0   0   0   0 378   0   0   0]
+ [ 29   0   2   0  80   0   1 258   8   0]
+ [  5   0   5   0  58   0   0  76 214  20]
+ [  4   4  19  38  23  10 103  15   3 159]]

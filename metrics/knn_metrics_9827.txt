@@ -1,0 +1,35 @@
+Model: K-Nearest Neighbors
+Accuracy: 98.27%
+Date: 2026-02-03 13:03:34.658738
+Training Dataset: dji_10mhz_chamber
+Evaluation Dataset: dji_10mhz_chamber
+Notes: K_NEIGHBORS = 20
+
+=========PARAMETERS=========
+WINDOW_LEN = 2,048
+OVERLAP = 0.25
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+7,000	Ocusync_2.0_mini_4k_DL
+7,000	Ocusync_2.0_mini_4k_UL
+7,000	background_noise
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+Ocusync_2.0_mini_4k_DL       0.98      1.00      0.99      7000
+Ocusync_2.0_mini_4k_UL       0.96      1.00      0.98      7000
+      background_noise       1.00      0.95      0.97      7000
+
+              accuracy                           0.98     21000
+             macro avg       0.98      0.98      0.98     21000
+          weighted avg       0.98      0.98      0.98     21000
+
+
+Confusion Matrix:
+[[7000    0    0]
+ [   0 7000    0]
+ [ 107  256 6637]]

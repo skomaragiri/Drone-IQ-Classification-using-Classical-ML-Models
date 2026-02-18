@@ -1,0 +1,41 @@
+Model: K-Nearest Neighbors
+Accuracy: 43.47%
+Date: 2026-02-03 22:21:02.189721
+Training Dataset: dji_20mhz_comms
+Evaluation Dataset: dji_20mhz_comms
+Notes: K_NEIGHBORS = 20
+
+=========PARAMETERS=========
+WINDOW_LEN = 1,024
+OVERLAP = 0.1
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+14,461	background_noise
+14,461	Bluetooth
+14,461	Ocusync_2.0_mini_4k_DL
+14,461	Ocusync_2.0_mini_4k_UL
+14,461	WIFI
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+             Bluetooth       0.09      0.01      0.01     14461
+Ocusync_2.0_mini_4k_DL       0.45      0.94      0.61     14461
+Ocusync_2.0_mini_4k_UL       0.43      0.68      0.53     14461
+                  WIFI       0.32      0.03      0.05     14461
+      background_noise       0.44      0.52      0.48     14461
+
+              accuracy                           0.43     72305
+             macro avg       0.34      0.43      0.33     72305
+          weighted avg       0.34      0.43      0.33     72305
+
+
+Confusion Matrix:
+[[   81  3199  5488    27  5666]
+ [  263 13529   503   115    51]
+ [  119  4022  9879   199   242]
+ [  169  6913  3445   368  3566]
+ [  310  2360  3765   454  7572]]

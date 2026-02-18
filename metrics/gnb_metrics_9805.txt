@@ -1,0 +1,32 @@
+Model: Gaussian Naive-Bayes
+Accuracy: 98.05%
+Date: 2026-02-03 22:37:57.200705
+Training Dataset: n11_pro_comms_room_DL
+Evaluation Dataset: n11_pro_comms_room_DL
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 2,048
+OVERLAP = 0.25
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+25,097	n11_pro_DL
+25,097	background_noise
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+background_noise       0.97      1.00      0.98     25097
+      n11_pro_DL       1.00      0.96      0.98     25097
+
+        accuracy                           0.98     50194
+       macro avg       0.98      0.98      0.98     50194
+    weighted avg       0.98      0.98      0.98     50194
+
+
+Confusion Matrix:
+[[25009    88]
+ [  889 24208]]

@@ -1,0 +1,32 @@
+Model: Random Forest
+Accuracy: 99.44%
+Date: 2026-02-03 22:46:26.626303
+Training Dataset: n11_pro_comms_room_DL
+Evaluation Dataset: n11_pro_comms_room_DL
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 2,048
+OVERLAP = 0.25
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+25,097	background_noise
+25,097	n11_pro_DL
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+background_noise       0.99      1.00      0.99     25097
+      n11_pro_DL       1.00      0.99      0.99     25097
+
+        accuracy                           0.99     50194
+       macro avg       0.99      0.99      0.99     50194
+    weighted avg       0.99      0.99      0.99     50194
+
+
+Confusion Matrix:
+[[24977   120]
+ [  160 24937]]

@@ -1,0 +1,25 @@
+Model: Random Forest
+Accuracy: 92.38%
+Max files: 1
+Date: 2025-12-18 01:49:05.085624
+Notes: Using the fixed length sample size
+
+
+Count	Label
+7107	no_label
+521	Ruko_F11_Uplink
+
+Classification Report:
+                 precision    recall  f1-score   support
+
+Ruko_F11_Uplink       0.47      0.79      0.59       521
+       no_label       0.98      0.93      0.96      7107
+
+       accuracy                           0.92      7628
+      macro avg       0.72      0.86      0.77      7628
+   weighted avg       0.95      0.92      0.93      7628
+
+
+Confusion Matrix:
+[[ 410  111]
+ [ 470 6637]]

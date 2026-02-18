@@ -1,0 +1,41 @@
+Model: Random Forest
+Accuracy: 41.30%
+Date: 2026-02-03 22:36:14.102409
+Training Dataset: dji_20mhz_comms
+Evaluation Dataset: dji_20mhz_comms
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 1,024
+OVERLAP = 0.1
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+14,461	WIFI
+14,461	Ocusync_2.0_mini_4k_DL
+14,461	Ocusync_2.0_mini_4k_UL
+14,461	Bluetooth
+14,461	background_noise
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+             Bluetooth       0.06      0.00      0.00     14461
+Ocusync_2.0_mini_4k_DL       0.37      0.98      0.54     14461
+Ocusync_2.0_mini_4k_UL       0.44      0.44      0.44     14461
+                  WIFI       0.01      0.00      0.00     14461
+      background_noise       0.49      0.64      0.56     14461
+
+              accuracy                           0.41     72305
+             macro avg       0.28      0.41      0.31     72305
+          weighted avg       0.28      0.41      0.31     72305
+
+
+Confusion Matrix:
+[[   22  3714  2285     0  8440]
+ [   11 14179   193     0    78]
+ [    8  7760  6413    59   221]
+ [    0 10287  3422     2   750]
+ [  303  2502  2122   285  9249]]

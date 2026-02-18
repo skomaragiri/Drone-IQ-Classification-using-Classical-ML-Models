@@ -1,0 +1,39 @@
+Model: K-Nearest Neighbors
+Accuracy: 39.19%
+Date: 2026-01-29 09:40:42.475097
+Notes: K_NEIGHBORS = 7
+
+=========PARAMETERS=========
+WINDOW_LEN = 4,096
+OVERLAP = 0.5
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 8
+
+Count	Label
+7,079	Ocusync_2.0_mini_4k_UL
+7,079	Bluetooth
+7,079	Ocusync_2.0_mini_4k_DL
+7,079	WIFI
+7,079	no_label
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+             Bluetooth       0.10      0.01      0.02      7079
+Ocusync_2.0_mini_4k_DL       0.35      0.71      0.47      7079
+Ocusync_2.0_mini_4k_UL       0.45      0.70      0.54      7079
+                  WIFI       0.34      0.02      0.04      7079
+              no_label       0.43      0.51      0.47      7079
+
+              accuracy                           0.39     35395
+             macro avg       0.33      0.39      0.31     35395
+          weighted avg       0.33      0.39      0.31     35395
+
+
+Confusion Matrix:
+[[ 100 2036 3352   24 1567]
+ [ 346 5038 1111   28  556]
+ [ 137 1342 4931  121  548]
+ [ 249 4206  214  161 2249]
+ [ 158 1723 1418  138 3642]]

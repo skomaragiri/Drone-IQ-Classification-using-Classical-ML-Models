@@ -1,0 +1,35 @@
+Model: Random Forest
+Accuracy: 98.73%
+Date: 2026-02-03 13:05:16.434539
+Training Dataset: dji_10mhz_chamber
+Evaluation Dataset: dji_10mhz_chamber
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 2,048
+OVERLAP = 0.25
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+7,000	Ocusync_2.0_mini_4k_UL
+7,000	background_noise
+7,000	Ocusync_2.0_mini_4k_DL
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+Ocusync_2.0_mini_4k_DL       1.00      1.00      1.00      7000
+Ocusync_2.0_mini_4k_UL       0.97      1.00      0.98      7000
+      background_noise       1.00      0.97      0.98      7000
+
+              accuracy                           0.99     21000
+             macro avg       0.99      0.99      0.99     21000
+          weighted avg       0.99      0.99      0.99     21000
+
+
+Confusion Matrix:
+[[7000    0    0]
+ [   0 6969   31]
+ [  32  204 6764]]

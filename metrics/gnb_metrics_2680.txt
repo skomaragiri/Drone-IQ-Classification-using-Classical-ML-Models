@@ -1,0 +1,41 @@
+Model: Gaussian Naive-Bayes
+Accuracy: 26.80%
+Date: 2026-02-03 22:21:26.651473
+Training Dataset: dji_20mhz_comms
+Evaluation Dataset: dji_20mhz_comms
+Notes: Using the fixed length sample size
+
+=========PARAMETERS=========
+WINDOW_LEN = 1,024
+OVERLAP = 0.1
+NUM_FEATURES = 80
+NUM_TRAINING_FILES = 28
+NUM_EVALUATION_FILES = 7
+
+Count	Label
+14,461	background_noise
+14,461	Bluetooth
+14,461	Ocusync_2.0_mini_4k_DL
+14,461	Ocusync_2.0_mini_4k_UL
+14,461	WIFI
+
+Classification Report:
+                        precision    recall  f1-score   support
+
+             Bluetooth       0.00      0.00      0.00     14461
+Ocusync_2.0_mini_4k_DL       0.31      0.99      0.47     14461
+Ocusync_2.0_mini_4k_UL       0.09      0.12      0.11     14461
+                  WIFI       0.00      0.00      0.00     14461
+      background_noise       0.93      0.23      0.36     14461
+
+              accuracy                           0.27     72305
+             macro avg       0.27      0.27      0.19     72305
+          weighted avg       0.27      0.27      0.19     72305
+
+
+Confusion Matrix:
+[[    0  4208 10069   184     0]
+ [    0 14334    71    56     0]
+ [  392 11226  1788   824   231]
+ [    0 14263   198     0     0]
+ [  542  2780  7445   439  3255]]
