@@ -13,6 +13,40 @@ def listShape(list):
 
 
 
+def stats_by_label(samples: np.ndarray,
+                 labels: np.ndarray,
+                 decimal_places: int):
+
+    unique_labels = np.unique(labels)
+    label_stats = {}
+
+    for label in unique_labels:
+        indices = np.where(labels == label)[0]
+        label_samples = samples[labels == label]
+
+        if len(label_samples) > 0:
+            label_stats[label] = (
+                np.mean(label_samples, axis=0),
+                np.var(label_samples, axis=0),
+                np.std(label_samples, axis=0)
+            )
+        else:
+            label_stats[label] = None
+
+    for label, stats in label_stats.items():
+        if stats is None:
+            continue
+        mean, var, std = stats
+        print(f"Label: {label}")
+        print(f"mean {[f'{x:.6f}' for x in mean]}")
+        print(f"var  {[f'{x:.6f}' for x in var]}")
+        print(f"std  {[f'{x:.6f}' for x in std]}")
+        print()
+
+        print(f"Samples and labels matching? {samples.shape[0] == len(labels)}")
+
+    
+
 
 
 def display(derived_samples: np.array, labels: np.array):
@@ -35,7 +69,6 @@ def display(derived_samples: np.array, labels: np.array):
     print("The counts:")
     for lab, c in zip(unique_labels, counts):
         print(f"{str(f"{c:,}"):8s} \"{lab}\"")
-
 
 
 
@@ -93,7 +126,7 @@ def printMetrics(
     
     print(f"=========PARAMETERS=========")
     print(f"WINDOW_LEN = {window_size:,}")
-    print(f"OVERLAP = {overlap}")
+    print(f"FFT_OVERLAP = {overlap}")
     print(f"NUM_FEATURES = {num_features}")
     print(f"NUM_TRAINING_FILES = {num_training_files}")
     print(f"NUM_EVALUATION_FILES = {num_evaluation_files}")
@@ -150,7 +183,7 @@ def saveMetricsToFile(
         f.write(f"Notes: {notes}\n\n")
         f.write(f"=========PARAMETERS=========\n")
         f.write(f"WINDOW_LEN = {window_size:,}\n")
-        f.write(f"OVERLAP = {overlap}\n")
+        f.write(f"FFT_OVERLAP = {overlap}\n")
         f.write(f"NUM_FEATURES = {num_features}\n")
         f.write(f"NUM_TRAINING_FILES = {num_training_files}\n")
         f.write(f"NUM_EVALUATION_FILES = {num_evaluation_files}\n")
