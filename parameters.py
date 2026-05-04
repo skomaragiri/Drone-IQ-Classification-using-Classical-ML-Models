@@ -43,7 +43,7 @@ PREPROCESSING_TECHNIQUE = f"fft_w{PATCH_WIDTH_TIME}_h{PATCH_HEIGHT_FREQ}_th{TIME
 # uav-cyberlab-rfml laptop
 training_data_dir = f'/home/uav-cyberlab-rfml/RFML/test-dataset/test_{TRAINING_DATASET}_training'
 eval_data_dir = f'/home/uav-cyberlab-rfml/RFML/test-dataset/test_{TRAINING_DATASET}_eval'
-
+deep_training_dir = f'/home/uav-cyberlab-rfml/rww_conference/annotations/Training'
 
 
 # FEATURES_TO_USE = [
