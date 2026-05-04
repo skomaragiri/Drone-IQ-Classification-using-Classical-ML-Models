@@ -1,4 +1,4 @@
-# IQ Classification Classical Models
+# IQ Classification Classical Models vs Deep Learning Models
 Building classical machine learning models for IQ and UAV classification.
 
 IQ samples: An IQ sample is a pair of digital values (In-phase and Quadrature) that represent a radio signal's amplitude and phase at a specific moment, capturing its complete information (amplitude, phase, frequency) in two orthogonal components. 
