@@ -10,4 +10,5 @@ Each of the models has there own file in the root directory (this directory). Ea
 1. Gaussian Naive Bayes 
 2. K-Nearest Neighbors 
 3. Random Forest
-4. XG Boosting Model 
+4. XG Boosting Model
+5. SVM (RBF Kernel)
